@@ -2,11 +2,18 @@ import Image from 'next/image';
 import { Asset, Entry, EntryFieldTypes, createClient } from 'contentful';
 import { StoryPreview } from '../components/StoryPreview/storyPreview';
 
-interface storyDataStructure {
+export interface storyDataStructure {
   contentTypeId: 'storyPage';
   fields: {
+    title: EntryFieldTypes.Text;
     name: EntryFieldTypes.Text;
+    cityFrom: EntryFieldTypes.Text;
+    cityTo: EntryFieldTypes.Text;
+    quote: EntryFieldTypes.Text;
+    summary: EntryFieldTypes.Text;
+    article: EntryFieldTypes.Text;
     mainImage: EntryFieldTypes.AssetLink;
+    storyImages: EntryFieldTypes.AssetLink[];
     slug: EntryFieldTypes.Text;
   };
 }

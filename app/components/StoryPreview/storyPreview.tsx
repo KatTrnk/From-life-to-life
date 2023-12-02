@@ -14,7 +14,7 @@ export const StoryPreview: React.FC<storyPreviewProps> = ({
   slug,
 }) => {
   return (
-    <Link href={slug}>
+    <Link href={`/stories/${slug}`}>
       <p>{name}</p>
       <Image
         src={`https:${mainImage.fields.file?.url}`}
