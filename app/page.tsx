@@ -3,6 +3,8 @@ import styles from './page.module.css';
 import { Asset, Entry, EntryFieldTypes, createClient } from 'contentful';
 import { Exhibition } from './components/Exhibitions/exhibition';
 import { Partners } from './components/Partners/partners';
+import { Header } from './components/Header/header';
+import { Footer } from './components/Footer/footer';
 
 interface previewStructure {
   contentTypeId: 'pagePreview';
@@ -68,10 +70,18 @@ export default async function Home() {
     partnersStructure,
     undefined
   >[];
-  console.log(homepageData);
+  const banner = homepageData.fields.banner as Asset<undefined, string>;
+  console.log(banner);
   return (
     <>
+      <Header />
       <h1>{homepageData.fields.mainTitle}</h1>
+      <Image
+        src={`https:${banner.fields?.file?.url}`}
+        alt="banner"
+        width={100}
+        height={100}
+      />
       <Exhibition
         location={exhibition.fields.location}
         dateFrom={exhibition.fields.dateFrom}
@@ -90,6 +100,7 @@ export default async function Home() {
           />
         );
       })}
+      <Footer />
     </>
   );
 }
