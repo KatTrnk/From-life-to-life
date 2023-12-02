@@ -6,6 +6,8 @@ import { Exhibition } from './components/Exhibitions/exhibition';
 import { PagePreview } from './components/PagePreview/PagePreview';
 
 import { Partners } from './components/Partners/partners';
+import { Header } from './components/Header/header';
+import { Footer } from './components/Footer/footer';
 
 
 interface previewStructure {
@@ -79,11 +81,20 @@ export default async function Home() {
     partnersStructure,
     undefined
   >[];
+
+  const banner = homepageData.fields.banner as Asset<undefined, string>;
   console.log(homepageData);
 
   return (
     <>
+      <Header />
       <h1>{homepageData.fields.mainTitle}</h1>
+      <Image
+        src={`https:${banner.fields?.file?.url}`}
+        alt="banner"
+        width={100}
+        height={100}
+      />
       <Exhibition
         location={exhibition.fields.location}
         dateFrom={exhibition.fields.dateFrom}
@@ -109,6 +120,8 @@ export default async function Home() {
           />
         );
       })}
+
+      <Footer />
 
     </>
   );
