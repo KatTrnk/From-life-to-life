@@ -15,12 +15,12 @@ export const Exhibition: React.FC<ExhibitionProps> = ({
   details,
 }) => {
   return (
-    <>
+    <div>
       <div className="location">{location}</div>
       <p className="date date-from">{dateFrom}</p>
       <p className="date date-to">{dateTo}</p>
       <p className="link">{link}</p>
       <p className="details">{documentToReactComponents(details)}</p>
-    </>
+    </div>
   );
 };
