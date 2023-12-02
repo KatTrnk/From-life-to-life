@@ -1,11 +1,46 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { createClient } from 'contentful';
+import { EntryFieldTypes, createClient } from 'contentful';
+
+interface previewStructure {
+  contentTypeId: 'pagePreview';
+  fields: {
+    previewImage: EntryFieldTypes.AssetLink;
+    previewText: EntryFieldTypes.Text;
+  };
+}
+interface partnersStructure {
+  contentTypeId: 'partners';
+  fields: {
+    logo: EntryFieldTypes.AssetLink;
+    email: EntryFieldTypes.Text;
+    url: EntryFieldTypes.Text;
+    title: EntryFieldTypes.Text;
+  };
+}
+interface exhibitionsStucture {
+  contentTypeId: 'exhibitions';
+  fields: {
+    location: EntryFieldTypes.Text;
+    dateFrom: EntryFieldTypes.Date;
+    dateTo: EntryFieldTypes.Date;
+    link: EntryFieldTypes.Text;
+    details: EntryFieldTypes.RichText;
+  };
+}
 
 interface homepageDataStructure {
   contentTypeId: 'homePage';
   fields: {
-    mainTitle: string;
+    mainTitle: EntryFieldTypes.Text;
+    banner: EntryFieldTypes.AssetLink;
+    introduction: EntryFieldTypes.Text;
+    projectPreview: EntryFieldTypes.EntryLink<previewStructure>;
+    galleryPreview: EntryFieldTypes.EntryLink<previewStructure>;
+    partners: EntryFieldTypes.Array<
+      EntryFieldTypes.EntryLink<partnersStructure>
+    >;
+    exhibitions: EntryFieldTypes.EntryLink<exhibitionsStucture>;
   };
 }
 const client = createClient({
@@ -16,7 +51,7 @@ const client = createClient({
 const getHomepageData = async () => {
   const res = await client.getEntries<homepageDataStructure>({
     content_type: 'homePage',
-    locale: 'cs',
+    locale: 'en-US',
   });
   return res.items[0];
 };
