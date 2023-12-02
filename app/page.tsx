@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { EntryFieldTypes, createClient } from 'contentful';
+import { Entry, EntryFieldTypes, createClient } from 'contentful';
+import { Exhibition } from './components/Exhibitions/exhibition';
 
 interface previewStructure {
   contentTypeId: 'pagePreview';
@@ -58,6 +59,21 @@ const getHomepageData = async () => {
 
 export default async function Home() {
   const homepageData = await getHomepageData();
+  const exhibition = homepageData.fields.exhibitions as Entry<
+    exhibitionsStucture,
+    undefined
+  >;
   console.log(homepageData);
-  return <h1>{homepageData.fields.mainTitle}</h1>;
+  return (
+    <>
+      <h1>{homepageData.fields.mainTitle}</h1>
+      <Exhibition
+        location={exhibition.fields.location}
+        dateFrom={exhibition.fields.dateFrom}
+        dateTo={exhibition.fields.dateTo}
+        link={exhibition.fields.link}
+        details={exhibition.fields.details}
+      />
+    </>
+  );
 }
