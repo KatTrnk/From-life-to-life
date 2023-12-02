@@ -2,14 +2,18 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import { Asset, Entry, EntryFieldTypes, createClient } from 'contentful';
 import { Exhibition } from './components/Exhibitions/exhibition';
+
+import { PagePreview } from './components/PagePreview/PagePreview';
+
 import { Partners } from './components/Partners/partners';
 import { Header } from './components/Header/header';
 import { Footer } from './components/Footer/footer';
 
+
 interface previewStructure {
   contentTypeId: 'pagePreview';
   fields: {
-    previewImage: EntryFieldTypes.AssetLink;
+    previewImage: EntryFieldTypes.AssetLink[];
     previewText: EntryFieldTypes.Text;
   };
 }
@@ -66,12 +70,21 @@ export default async function Home() {
     exhibitionsStucture,
     undefined
   >;
+
+  const projectPreview = homepageData.fields.projectPreview as Entry<
+    previewStructure,
+    undefined
+  >;
+  console.log(projectPreview);
+
   const partners = homepageData.fields.partners as Entry<
     partnersStructure,
     undefined
   >[];
+
   const banner = homepageData.fields.banner as Asset<undefined, string>;
-  console.log(banner);
+  console.log(homepageData);
+
   return (
     <>
       <Header />
@@ -89,6 +102,13 @@ export default async function Home() {
         link={exhibition.fields.link}
         details={exhibition.fields.details}
       />
+
+
+      <PagePreview
+        previewImages={projectPreview.fields.previewImage}
+        previewText={projectPreview.fields.previewText}
+      />
+
       {partners.map((e) => {
         const image = e.fields.logo as Asset<undefined, string>;
         return (
@@ -100,7 +120,9 @@ export default async function Home() {
           />
         );
       })}
+
       <Footer />
+
     </>
   );
 }
