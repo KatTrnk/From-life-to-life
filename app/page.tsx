@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import styles from './page.module.css';
-import { Entry, EntryFieldTypes, createClient } from 'contentful';
+import { Asset, Entry, EntryFieldTypes, createClient } from 'contentful';
 import { Exhibition } from './components/Exhibitions/exhibition';
+import { Partners } from './components/Partners/partners';
 
 interface previewStructure {
   contentTypeId: 'pagePreview';
@@ -63,6 +64,10 @@ export default async function Home() {
     exhibitionsStucture,
     undefined
   >;
+  const partners = homepageData.fields.partners as Entry<
+    partnersStructure,
+    undefined
+  >[];
   console.log(homepageData);
   return (
     <>
@@ -74,6 +79,17 @@ export default async function Home() {
         link={exhibition.fields.link}
         details={exhibition.fields.details}
       />
+      {partners.map((e) => {
+        const image = e.fields.logo as Asset<undefined, string>;
+        return (
+          <Partners
+            logoUrl={`https:${image.fields?.file?.url}`}
+            email={e.fields.email}
+            url={e.fields.url}
+            title={e.fields.title}
+          />
+        );
+      })}
     </>
   );
 }
