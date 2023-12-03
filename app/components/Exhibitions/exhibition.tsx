@@ -1,5 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Document } from '@contentful/rich-text-types';
+import '../Exhibitions/exhibition.css';
+
 interface ExhibitionProps {
   location: string;
   dateFrom: string;
@@ -15,7 +17,7 @@ export const Exhibition: React.FC<ExhibitionProps> = ({
   details,
 }) => {
   return (
-    <div>
+    <div className="container__exhibition">
       <div className="location">{location}</div>
       <p className="date date-from">{dateFrom}</p>
       <p className="date date-to">{dateTo}</p>
