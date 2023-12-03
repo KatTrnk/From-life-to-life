@@ -16,7 +16,6 @@ interface storyProps {
   storyImages: Asset[];
   slug: string;
   storyArticle: Document;
-  isPortrait: boolean;
 }
 
 export const StoryDetail: React.FC<storyProps> = ({
@@ -31,7 +30,6 @@ export const StoryDetail: React.FC<storyProps> = ({
   storyImages,
   slug,
   storyArticle,
-  isPortrait = false,
 }) => {
   return (
     <div className="story">
