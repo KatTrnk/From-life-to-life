@@ -2,6 +2,8 @@ import { EntryFieldTypes, createClient, Entry, Asset } from 'contentful';
 import { Header } from '../components/Header/header';
 import { Footer } from '../components/Footer/footer';
 import { Authors } from '../components/Authors/Authors';
+import { About } from '../components/About/about';
+import './about.css';
 
 interface authorsStructure {
   contentTypeId: 'contactPerson';
@@ -37,17 +39,22 @@ const getAboutData = async () => {
   return res.items[0];
 };
 
-export default async function About() {
+export default async function AboutPage() {
   const aboutData = await getAboutData();
-  console.log(aboutData);
+  //console.log(aboutData);
   const authors = aboutData.fields.authors as Entry<
     authorsStructure,
     undefined
   >[];
-  console.log(authors);
+  //console.log(authors);
 
   return (
     <div>
+      <About
+        title={aboutData.fields.title}
+        quote={aboutData.fields.quote}
+        article={aboutData.fields.article}
+      />
       {authors.map((i) => {
         const image = i.fields.image as Asset<undefined, string>;
         return (
