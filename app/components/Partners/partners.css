@@ -6,5 +6,10 @@
 }
 
 .logo {
-  width: 20%;
+  padding: 30px;
+  width: 40%;
+}
+
+.details {
+  font-size: 30px;
 }

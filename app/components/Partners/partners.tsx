@@ -15,10 +15,10 @@ export const Partners: React.FC<PartnersProps> = ({
 }) => {
   return (
     <div className="container__partners">
+      <p className="details">{title}</p>
       <img className="logo" src={logoUrl}></img>
-      {/* <p className="email">{email}</p>
-      <p className="link">{url}</p> */}
-      {/* <p className="details">{title}</p> */}
+      <p className="email">{email}</p>
+      {/* <p className="link">{url}</p> */}
     </div>
   );
 };
