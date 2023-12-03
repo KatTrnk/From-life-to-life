@@ -75,6 +75,10 @@ export default async function Home() {
     previewStructure,
     undefined
   >;
+  const galleryPreviewPreview = homepageData.fields.galleryPreview as Entry<
+    previewStructure,
+    undefined
+  >;
   console.log(projectPreview);
 
   const partners = homepageData.fields.partners as Entry<
@@ -112,19 +116,28 @@ export default async function Home() {
       <PagePreview
         previewImages={projectPreview.fields.previewImage}
         previewText={projectPreview.fields.previewText}
+        title="About Project"
+        url="/about"
       />
-      {/* 
+      <PagePreview
+        previewImages={galleryPreviewPreview.fields.previewImage}
+        previewText={galleryPreviewPreview.fields.previewText}
+        isSingle
+        title="Gallery"
+        url="/stories"
+      />
+
       {partners.map((e) => {
         const image = e.fields.logo as Asset<undefined, string>;
         return (
-          // <Partners
-          //   logoUrl={`https:${image.fields?.file?.url}`}
-          //   email={e.fields.email}
-          //   url={e.fields.url}
-          //   title={e.fields.title}
-          // />
-        ); */}
-      {/* })} */}
+          <Partners
+            logoUrl={`https:${image.fields?.file?.url}`}
+            email={e.fields.email}
+            url={e.fields.url}
+            title={e.fields.title}
+          />
+        );
+      })}
     </div>
   );
 }
