@@ -1,5 +1,8 @@
 import { Asset } from 'contentful';
 import Image from 'next/image';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { Document } from '@contentful/rich-text-types';
+import './story.css';
 
 interface storyProps {
   title: string;
@@ -12,7 +15,8 @@ interface storyProps {
   mainImage: Asset;
   storyImages: Asset[];
   slug: string;
-  isHorizontal: boolean;
+  storyArticle: Document;
+  isPortrait: boolean;
 }
 
 export const StoryDetail: React.FC<storyProps> = ({
@@ -26,23 +30,34 @@ export const StoryDetail: React.FC<storyProps> = ({
   mainImage,
   storyImages,
   slug,
-  isHorizontal = false,
+  storyArticle,
+  isPortrait = false,
 }) => {
   return (
-    <div className="container">
-      <h2 className="title">{title}</h2>
-      <p className="name">{name}</p>
-      <p className="cityFrom">{cityFrom}</p>
-      <p className="cityTo">{cityTo}</p>
-      <Image
-        src={`https:${mainImage.fields.file?.url}`}
-        alt={`${mainImage.fields.title} image`}
-        width={100}
-        height={100}
-      />
-      <p className="quote">{quote}</p>
-      <p className="summary">{summary}</p>
-      <p className="article">{article}</p>
+    <div className="story">
+      <h2 className="story__title">{title}</h2>
+      <div className="story__name">
+        <p className="name">{name}</p>
+        <div className="story__city">
+          <p className="cityFrom">{`${cityFrom}-`}</p>
+          <p className="cityTo">{cityTo}</p>
+        </div>
+      </div>
+
+      <div className="story__image-container">
+        <Image
+          className="story__image-container__image"
+          src={`https:${mainImage.fields.file?.url}`}
+          alt={`${mainImage.fields.title} image`}
+          fill
+          priority
+        />
+      </div>
+      <div className="story__article">
+        <p className="quote">{quote}</p>
+        <p className="summary">{summary}</p>
+        <div className="article">{documentToReactComponents(storyArticle)}</div>
+      </div>
     </div>
   );
 };

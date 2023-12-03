@@ -25,7 +25,7 @@ export default async function Story({ params }: { params: { slug: string } }) {
   return (
     <div>
       <StoryDetail
-        title={storyData.fields.title}
+        title={storyData.fields.storyTitle}
         name={storyData.fields.name}
         cityFrom={storyData.fields.cityFrom}
         cityTo={storyData.fields.cityTo}
@@ -35,7 +35,8 @@ export default async function Story({ params }: { params: { slug: string } }) {
         summary={storyData.fields.summary}
         article={storyData.fields.article}
         slug={storyData.fields.slug}
-        isHorizontal={false}
+        isPortrait={storyData.fields.isPortrait}
+        storyArticle={storyData.fields.storyArticle}
       />
     </div>
   );
