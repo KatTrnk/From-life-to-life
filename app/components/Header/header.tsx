@@ -11,7 +11,7 @@ export const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <>
+    <div>
       <div className="navigation">
         <div className={isOpen ? ' menu menu-open' : 'menu'}>
           <div className="sidebar">
@@ -35,6 +35,6 @@ export const Header = () => {
           <Image src={icon} alt="Menu Icon" width={50} height={50} />
         </div>
       </div>
-    </>
+    </div>
   );
 };

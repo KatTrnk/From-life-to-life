@@ -45,7 +45,7 @@ export default async function Stories() {
   console.log(storiesData);
 
   return (
-    <>
+    <div>
       {storiesData.fields.stories.map((item) => {
         const story = item as Entry<storyDataStructure, undefined>;
         const image = story.fields.mainImage as Asset<undefined, string>;
@@ -57,6 +57,6 @@ export default async function Stories() {
           />
         );
       })}
-    </>
+    </div>
   );
 }

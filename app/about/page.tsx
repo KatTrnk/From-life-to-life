@@ -47,7 +47,7 @@ export default async function About() {
   console.log(authors);
 
   return (
-    <>
+    <div>
       {authors.map((i) => {
         const image = i.fields.image as Asset<undefined, string>;
         return (
@@ -61,6 +61,6 @@ export default async function About() {
           />
         );
       })}
-    </>
+    </div>
   );
 }
