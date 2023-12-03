@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.css';
+import '../app/styles.css';
 import { Asset, Entry, EntryFieldTypes, createClient } from 'contentful';
 import { Exhibition } from './components/Exhibitions/exhibition';
 
@@ -85,38 +86,45 @@ export default async function Home() {
   console.log(homepageData);
 
   return (
-    <>
-      <h1>{homepageData.fields.mainTitle}</h1>
-      <Image
-        src={`https:${banner.fields?.file?.url}`}
-        alt="banner"
-        width={100}
-        height={100}
-      />
-      <Exhibition
+    <div>
+      <div className="container-header">
+        <h1 className="header">{homepageData.fields.mainTitle}</h1>
+
+        <Image
+          className="container-banner"
+          src={`https:${banner.fields?.file?.url}`}
+          alt="banner"
+          fill
+          priority
+        />
+      </div>
+      <div className="container__empty">
+        <p className="introduction">{homepageData.fields.introduction}</p>
+      </div>
+      {/* <Exhibition
         location={exhibition.fields.location}
         dateFrom={exhibition.fields.dateFrom}
         dateTo={exhibition.fields.dateTo}
         link={exhibition.fields.link}
         details={exhibition.fields.details}
-      />
+      /> */}
 
       <PagePreview
         previewImages={projectPreview.fields.previewImage}
         previewText={projectPreview.fields.previewText}
       />
-
+      {/* 
       {partners.map((e) => {
         const image = e.fields.logo as Asset<undefined, string>;
         return (
-          <Partners
-            logoUrl={`https:${image.fields?.file?.url}`}
-            email={e.fields.email}
-            url={e.fields.url}
-            title={e.fields.title}
-          />
-        );
-      })}
-    </>
+          // <Partners
+          //   logoUrl={`https:${image.fields?.file?.url}`}
+          //   email={e.fields.email}
+          //   url={e.fields.url}
+          //   title={e.fields.title}
+          // />
+        ); */}
+      {/* })} */}
+    </div>
   );
 }
