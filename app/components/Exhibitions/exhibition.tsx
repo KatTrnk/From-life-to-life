@@ -20,7 +20,7 @@ export const Exhibition: React.FC<ExhibitionProps> = ({
       <p className="date date-from">{dateFrom}</p>
       <p className="date date-to">{dateTo}</p>
       <p className="link">{link}</p>
-      <p className="details">{documentToReactComponents(details)}</p>
+      <div className="details">{documentToReactComponents(details)}</div>
     </div>
   );
 };
