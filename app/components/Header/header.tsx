@@ -17,16 +17,16 @@ export const Header = () => {
           <div className="sidebar">
             <ul>
               <li>
-                <a href="#">Home</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="/about">About</a>
               </li>
               <li>
-                <a href="#">Gallery</a>
+                <a href="/stories">Gallery</a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="/about">Contact</a>
               </li>
             </ul>
           </div>
