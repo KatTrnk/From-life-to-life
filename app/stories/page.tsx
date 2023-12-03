@@ -5,7 +5,7 @@ import { StoryPreview } from '../components/StoryPreview/storyPreview';
 export interface storyDataStructure {
   contentTypeId: 'storyPage';
   fields: {
-    title: EntryFieldTypes.Text;
+    storyTitle: EntryFieldTypes.Text;
     name: EntryFieldTypes.Text;
     cityFrom: EntryFieldTypes.Text;
     cityTo: EntryFieldTypes.Text;
@@ -15,6 +15,8 @@ export interface storyDataStructure {
     mainImage: EntryFieldTypes.AssetLink;
     storyImages: EntryFieldTypes.AssetLink[];
     slug: EntryFieldTypes.Text;
+    storyArticle: EntryFieldTypes.RichText;
+    isPortrait: EntryFieldTypes.Boolean;
   };
 }
 interface storiesListDataStructure {
