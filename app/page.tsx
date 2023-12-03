@@ -9,7 +9,6 @@ import { Partners } from './components/Partners/partners';
 import { Header } from './components/Header/header';
 import { Footer } from './components/Footer/footer';
 
-
 interface previewStructure {
   contentTypeId: 'pagePreview';
   fields: {
@@ -87,7 +86,6 @@ export default async function Home() {
 
   return (
     <>
-      <Header />
       <h1>{homepageData.fields.mainTitle}</h1>
       <Image
         src={`https:${banner.fields?.file?.url}`}
@@ -102,7 +100,6 @@ export default async function Home() {
         link={exhibition.fields.link}
         details={exhibition.fields.details}
       />
-
 
       <PagePreview
         previewImages={projectPreview.fields.previewImage}
@@ -120,9 +117,6 @@ export default async function Home() {
           />
         );
       })}
-
-      <Footer />
-
     </>
   );
 }
