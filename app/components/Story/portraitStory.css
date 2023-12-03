@@ -1,0 +1,127 @@
+.portrait-story {
+  margin: 0;
+  padding: 0;
+  font-family: "Alegreya", serif;
+}
+
+.portrait-story__title {
+  font-size: 2.2em;
+  font-family: "Alegreya", serif;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.portrait-story__city {
+  display: flex;
+  justify-content: row;
+}
+
+.portrait-story__name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 60px;
+  margin-bottom: 30px;
+}
+
+.portrait-story__name p {
+  padding-bottom: 10px;
+}
+
+.portrait-story__image-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.portrait-story__image-container__image {
+  object-fit: cover;
+  width: 50%;
+
+}
+
+.quote {
+  display: none;
+}
+
+/* .portrait-story__quoteImage-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+} */
+
+/* .portrait-story__article {
+  display: flex;
+  flex-direction: row;
+  padding-top: 25px;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+
+
+} */
+
+.portrait-story__quote {
+  padding-right: 40px;
+  font-weight: bold;
+  width: 50%
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+  margin-left: 40px;
+  margin-right: 40px;
+  line-height: 1.4;
+}
+
+/* .portrait-story-container {
+  display: flex;
+  flex-direction: row;
+} */
+
+
+@media (min-width:680px) {
+  .portrait-story-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* .portrait-story__article {
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  } */
+
+  .quote {
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    padding-right: 0;
+  }
+
+  .portrait-story__quoteImage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+
+
+  .portrait-story__quote {
+    padding-right: 0;
+    width: 100%;
+
+    font-weight: bold;
+
+  }
+}
