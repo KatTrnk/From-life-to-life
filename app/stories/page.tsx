@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import { Asset, Entry, EntryFieldTypes, createClient } from 'contentful';
 import { StoryPreview } from '../components/StoryPreview/storyPreview';
+import { Gallery } from '../components/Gallery/gallery';
 
 export interface storyDataStructure {
   contentTypeId: 'storyPage';
@@ -44,21 +44,16 @@ const getStoriesData = async () => {
 
 export default async function Stories() {
   const storiesData = await getStoriesData();
+  const galleryData = storiesData.fields.stories.map((story) => {
+    const storyItem = story as Entry<storyDataStructure, undefined>;
+    const image = storyItem.fields.mainImage as Asset<undefined, string>;
+    return {
+      name: storyItem.fields.name,
+      mainImage: image,
+      slug: storyItem.fields.slug,
+    };
+  });
   console.log(storiesData);
 
-  return (
-    <div>
-      {storiesData.fields.stories.map((item) => {
-        const story = item as Entry<storyDataStructure, undefined>;
-        const image = story.fields.mainImage as Asset<undefined, string>;
-        return (
-          <StoryPreview
-            name={story.fields.name}
-            mainImage={image}
-            slug={story.fields.slug}
-          />
-        );
-      })}
-    </div>
-  );
+  return <Gallery title={storiesData.fields.title} stories={galleryData} />;
 }
