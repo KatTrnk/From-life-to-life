@@ -107,6 +107,7 @@
     text-align: center;
     font-weight: bold;
     padding-right: 0;
+    line-height: 1.4;
   }
 
   .portrait-story__quoteImage-container {
@@ -114,6 +115,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+
   }
 
 
@@ -123,5 +125,59 @@
 
     font-weight: bold;
 
+  }
+
+  .portrait-story__image-container {
+    position: relative;
+    width: 320px;
+    height: 600px;
+  }
+}
+
+
+@media (min-width:1200px) {
+  .portrait-story-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  /* .portrait-story__article {
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  } */
+
+  .quote {
+    display: flex;
+    text-align: center;
+    font-weight: bold;
+    padding-right: 0;
+  }
+
+  .portrait-story__quoteImage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 35px;
+
+  }
+
+
+  .portrait-story__quote {
+    padding-right: 0;
+    width: 100%;
+
+    font-weight: bold;
+
+  }
+
+  .portrait-story__image-container {
+    position: relative;
+    width: 550px;
+    height: 720px;
   }
 }
