@@ -2,6 +2,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+
 }
 
 .hamburger {
@@ -20,13 +22,17 @@
 }
 
 .menu-open {
+  position: absolute;
   right: 0;
   z-index: 5;
+  width: 100vw;
+  text-align: center;
 }
 
 .menu .sidebar ul {
   list-style: none;
   padding: 0;
+
 }
 
 .menu .sidebar ul li {
@@ -39,6 +45,7 @@
   display: block;
   padding: 10px;
   font-family: 'Alegreya SC', serif;
+  text-transform: uppercase;
 
 }
 
@@ -46,3 +53,18 @@
 .icon {
   margin-right: 20px;
 }
+
+@media (min-width: 680px) {
+  .menu-open {
+    right: 0;
+    z-index: 5;
+    width: 50%;
+    text-align: center;
+  }
+
+}
+
+/* @media (min-width: 1200px) {
+  .menu-open {}
+
+} */
