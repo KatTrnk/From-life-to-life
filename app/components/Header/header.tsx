@@ -3,6 +3,7 @@ import { useState } from 'react';
 import icon from './menu.png';
 import Image from 'next/image';
 import '../Header/header.css';
+import Link from 'next/link';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +18,24 @@ export const Header = () => {
           <div className="sidebar">
             <ul>
               <li>
-                <a href="/">Home</a>
+                <Link className="link" href="/">
+                  Home
+                </Link>
               </li>
               <li>
-                <a href="/about">About</a>
+                <Link className="link" href="/about">
+                  About
+                </Link>
               </li>
               <li>
-                <a href="/stories">Gallery</a>
+                <Link className="link" href="/stories">
+                  Gallery
+                </Link>
               </li>
               <li>
-                <a href="/about">Contact</a>
+                <Link className="link" href="/about">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
