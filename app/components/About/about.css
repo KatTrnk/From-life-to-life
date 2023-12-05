@@ -1,0 +1,29 @@
+.about__title {
+  text-align: center;
+}
+
+.about__quote {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.about__article {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.ourTeam__title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
