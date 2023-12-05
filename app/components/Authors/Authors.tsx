@@ -2,6 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Document } from '@contentful/rich-text-types';
 import { Asset } from 'contentful';
 import Image from 'next/image';
+import './Authors.css';
 
 interface AuthorsProps {
   name: string;
@@ -18,20 +19,20 @@ export const Authors: React.FC<AuthorsProps> = ({
   link,
 }) => {
   return (
-    <div>
-      <div className="name">{name}</div>
-      <p className="email">{email}</p>
-
+    <div className="authors-container">
       <Image
-        className="image"
+        className="authors-image"
         src={`https:${image.fields.file?.url}`}
         alt={`${image.fields.title}image`}
         width={200}
         height={200}
       />
-
-      <p className="about">{about}</p>
-      <p className="link">{link}</p>
+      <div className="authors-detail">
+        <p className="authors-detal__name">{name}</p>
+        <p className="authors-detal__about">{about}</p>
+        <p className="authors-detal__email">{email}</p>
+        <p className="authors-detal__link">{link}</p>
+      </div>
     </div>
   );
 };

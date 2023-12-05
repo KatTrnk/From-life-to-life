@@ -1,0 +1,35 @@
+.authors-container {
+  display: grid;
+  gap: 15px;
+
+
+  position: relative;
+  width: 100%;
+
+}
+
+.authors-image {
+  object-fit: cover;
+  width: 310px;
+  height: 260px;
+  justify-self: center;
+  border-radius: 3% 3% 3% 3%;
+
+  box-shadow: 2px 2px 3px 2px rgba(20, 20, 20, 0.4);
+}
+
+
+
+.authors-detail {
+  text-align: center;
+  line-height: 1.3;
+  padding-bottom: 30px;
+}
+
+.authors-detal__name {
+  font-weight: bold;
+}
+
+.authors-detal__about {
+  font-style: italic;
+}
