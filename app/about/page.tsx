@@ -57,19 +57,21 @@ export default async function AboutPage() {
         article={aboutData.fields.article}
         titleTeam={aboutData.fields.titleTeam}
       />
-      {authors.map((i) => {
-        const image = i.fields.image as Asset<undefined, string>;
-        return (
-          <Authors
-            key={i.sys.id}
-            image={image}
-            name={i.fields.name}
-            email={i.fields.email}
-            about={i.fields.about}
-            link={i.fields.link}
-          />
-        );
-      })}
+      <div className="container__authors">
+        {authors.map((i) => {
+          const image = i.fields.image as Asset<undefined, string>;
+          return (
+            <Authors
+              key={i.sys.id}
+              image={image}
+              name={i.fields.name}
+              email={i.fields.email}
+              about={i.fields.about}
+              link={i.fields.link}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

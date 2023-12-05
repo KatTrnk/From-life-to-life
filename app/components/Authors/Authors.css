@@ -1,3 +1,7 @@
+body {
+  font-family: "Alegreya", serif;
+}
+
 .authors-container {
   display: grid;
   gap: 15px;
@@ -24,6 +28,7 @@
   text-align: center;
   line-height: 1.3;
   padding-bottom: 30px;
+
 }
 
 .authors-detal__name {
@@ -32,4 +37,23 @@
 
 .authors-detal__about {
   font-style: italic;
+}
+
+@media (min-width:680px) {
+  .authors-image {
+
+    width: 340px;
+    height: 290px;
+
+  }
+}
+
+@media (min-width:1000px) {
+  .authors-image {
+
+    width: 340px;
+    height: 290px;
+
+  }
+
 }
