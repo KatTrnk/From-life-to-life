@@ -7,8 +7,6 @@ import { Exhibition } from './components/Exhibitions/exhibition';
 import { PagePreview } from './components/PagePreview/PagePreview';
 
 import { Partners } from './components/Partners/partners';
-import { Header } from './components/Header/header';
-import { Footer } from './components/Footer/footer';
 
 interface previewStructure {
   contentTypeId: 'pagePreview';
