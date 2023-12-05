@@ -8,9 +8,9 @@ import './about.css';
 interface authorsStructure {
   contentTypeId: 'contactPerson';
   fields: {
+    image: EntryFieldTypes.AssetLink;
     name: EntryFieldTypes.Text;
     email: EntryFieldTypes.Text;
-    image: EntryFieldTypes.AssetLink;
     about: EntryFieldTypes.Text;
     link: EntryFieldTypes.Text;
   };
@@ -22,6 +22,7 @@ interface aboutDataStructure {
     title: EntryFieldTypes.Text;
     quote: EntryFieldTypes.Text;
     article: EntryFieldTypes.RichText;
+    titleTeam: EntryFieldTypes.Text;
     authors: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<authorsStructure>>;
   };
 }
@@ -54,15 +55,16 @@ export default async function AboutPage() {
         title={aboutData.fields.title}
         quote={aboutData.fields.quote}
         article={aboutData.fields.article}
+        titleTeam={aboutData.fields.titleTeam}
       />
       {authors.map((i) => {
         const image = i.fields.image as Asset<undefined, string>;
         return (
           <Authors
             key={i.sys.id}
+            image={image}
             name={i.fields.name}
             email={i.fields.email}
-            image={image}
             about={i.fields.about}
             link={i.fields.link}
           />
