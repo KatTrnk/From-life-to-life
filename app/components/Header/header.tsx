@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+
 import icon from './menu.png';
 import Image from 'next/image';
 import '../Header/header.css';
@@ -11,29 +12,36 @@ export const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
       <div className="navigation">
-        <div className={isOpen ? ' menu menu-open' : 'menu'}>
+        <div className={isOpen ? 'menu menu-open' : 'menu'}>
           <div className="sidebar">
             <ul>
+              {window.location.pathname !== '/' && (
+                <li>
+                  <Link href="/" onClick={closeMenu}>
+                    Home
+                  </Link>
+                </li>
+              )}
               <li>
-                <Link className="link" href="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link className="link" href="/about">
+                <Link href="/about" onClick={closeMenu}>
                   About
                 </Link>
               </li>
               <li>
-                <Link className="link" href="/stories">
+                <Link href="/stories" onClick={closeMenu}>
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link className="link" href="/about">
+                <Link href="/contact" onClick={closeMenu}>
                   Contact
                 </Link>
               </li>
