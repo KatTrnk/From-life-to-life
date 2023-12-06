@@ -52,7 +52,9 @@ export const StoryDetail: React.FC<storyProps> = ({
         />
       </div>
       <div className="story__article">
-        <p className="quote">{quote}</p>
+        <aside>
+          <p className="quote">{quote}</p>
+        </aside>
         <p className="summary">{summary}</p>
         <div className="article">{documentToReactComponents(storyArticle)}</div>
       </div>
