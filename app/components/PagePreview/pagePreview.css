@@ -1,10 +1,7 @@
 .page-preview {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 500px;
-
-
+  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .container__image {
@@ -18,6 +15,7 @@
 
 .image-number1 {
   grid-column-start: 2;
+
 }
 
 .image-number2 {
@@ -34,10 +32,11 @@
   grid-row-start: 1;
   grid-row-end: 3;
   height: 100%;
+  visibility: hidden;
 }
 
 .previewText {
-  grid-column-start: 3;
+  grid-column-start: 2;
   align-items: center;
   margin: auto;
   padding: 5px 40px;
@@ -47,13 +46,13 @@
 }
 
 .previewText--is-single {
-  grid-column-start: 3;
+  grid-column-start: 1;
   grid-row-start: 1;
   grid-row-end: 3;
 }
 
 .previewTitle {
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-column-start: 2;
   align-items: center;
   margin: auto;
@@ -61,6 +60,8 @@
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
+  border: 2px solid grey;
+  border-radius: 2px;
 
 }
 
@@ -70,13 +71,12 @@
 
 .previewTitle--is-single {
   grid-column-start: 1;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 4;
 }
 
 @media (min-width: 680px) {
   .page-preview {
-    display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     height: 500px;
@@ -95,6 +95,10 @@
     visibility: hidden;
   }
 
+  .image-number1.container__image--is-single {
+    visibility: visible;
+  }
+
   .previewText {
     grid-column-start: 2;
 
@@ -102,6 +106,9 @@
 
   .previewTitle {
     grid-column-start: 1;
+    grid-row-start: 2;
+    border: none;
+    border-radius: none;
   }
 
   .previewText--is-single {
@@ -119,21 +126,11 @@
 
 @media (min-width: 1200px) {
   .page-preview {
-    display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     height: 500px;
 
 
-  }
-
-  .container__image {
-    position: relative;
-
-  }
-
-  .container__image .image {
-    object-fit: cover;
   }
 
   .image-number1 {
@@ -149,12 +146,14 @@
   .image-number3 {
     grid-row-start: 2;
     grid-column-start: 3;
+    visibility: visible;
   }
 
   .image-number1.container__image--is-single {
     grid-row-start: 1;
     grid-row-end: 3;
     height: 100%;
+    visibility: visible;
   }
 
   .previewText {
@@ -182,6 +181,8 @@
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
+    border: none;
+    border-radius: none;
 
   }
 
