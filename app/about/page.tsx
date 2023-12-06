@@ -20,6 +20,7 @@ interface aboutDataStructure {
   contentTypeId: 'aboutPage';
   fields: {
     title: EntryFieldTypes.Text;
+    bannerAbout: EntryFieldTypes.AssetLink;
     quote: EntryFieldTypes.Text;
     article: EntryFieldTypes.RichText;
     titleTeam: EntryFieldTypes.Text;
@@ -48,11 +49,12 @@ export default async function AboutPage() {
     undefined
   >[];
   //console.log(authors);
-
+  const bannerAbout = aboutData.fields.bannerAbout as Asset<undefined, string>;
   return (
     <div>
       <About
         title={aboutData.fields.title}
+        bannerAbout={bannerAbout}
         quote={aboutData.fields.quote}
         article={aboutData.fields.article}
         titleTeam={aboutData.fields.titleTeam}

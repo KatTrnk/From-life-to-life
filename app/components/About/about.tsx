@@ -1,9 +1,13 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Document } from '@contentful/rich-text-types';
 import './about.css';
+import { Asset } from 'contentful';
+
+import Image from 'next/image';
 
 interface aboutProps {
   title: string;
+  bannerAbout: Asset;
   quote: string;
   article: Document;
   titleTeam: string;
@@ -11,6 +15,7 @@ interface aboutProps {
 
 export const About: React.FC<aboutProps> = ({
   title,
+  bannerAbout,
   article,
   quote,
   titleTeam,
@@ -18,7 +23,16 @@ export const About: React.FC<aboutProps> = ({
   return (
     <div>
       <div className="about-container">
-        <h2 className="about__title">{title}</h2>
+        <div className="about-header">
+          <h2 className="about__title">{title}</h2>
+          <Image
+            className="about__banner"
+            src={`https:${bannerAbout.fields.file?.url}`}
+            alt={`${bannerAbout.fields.title}image`}
+            fill
+            priority
+          />
+        </div>
         <p className="about__quote">{quote}</p>
         <div className="about__article">
           {documentToReactComponents(article)}
