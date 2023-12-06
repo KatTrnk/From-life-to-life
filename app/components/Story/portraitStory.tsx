@@ -55,7 +55,9 @@ export const PortraitStory: React.FC<portraitStoryProps> = ({
             />
           </div>
           <div className="portrait-story__quote">
-            <p className="quote">{quote}</p>
+            <aside className="pullquote">
+              <p className="quote">{quote}</p>
+            </aside>
           </div>
         </div>
 
