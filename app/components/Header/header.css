@@ -3,7 +3,7 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-
+  background-color: var(--background-secondary);
 }
 
 .hamburger {
@@ -39,7 +39,7 @@
   margin-bottom: 10px;
 }
 
-.menu .sidebar .link {
+.menu .sidebar a {
   color: black;
   text-decoration: none;
   display: block;
@@ -65,8 +65,3 @@
   }
 
 }
-
-/* @media (min-width: 1200px) {
-  .menu-open {}
-
-} */

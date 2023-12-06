@@ -1,3 +1,13 @@
 .footer {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-secondary);
+  padding: 20px 30px;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 6px;
 }

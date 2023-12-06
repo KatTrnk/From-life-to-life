@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: 3fr 1fr 1fr;
   grid-template-columns: 1fr;
+  background-color: var(--background-secondary);
 }
 
 .container__image {
@@ -183,7 +184,17 @@
     cursor: pointer;
     border: none;
     border-radius: none;
+    position: relative;
 
+  }
+
+  .previewTitle::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    border-bottom: 2px ridge black;
+    width: 274px
   }
 
   .previewTitle:hover {
