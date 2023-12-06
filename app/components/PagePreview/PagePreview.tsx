@@ -1,6 +1,7 @@
 import { Asset } from 'contentful';
 import Image from 'next/image';
 import './pagePreview.css';
+import '../../globals.css';
 import Link from 'next/link';
 
 interface pagePreviewProps {

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
 .container-header {
   position: relative;
   width: 100%;
@@ -24,7 +26,9 @@
 }
 
 .introduction {
-  font-family: 'Alegreya SC', serif;
+
+  font-weight: 600;
+  font-size: 1rem;
   /* margin-top: 10px;
   margin-left: 57px; */
   margin-left: 10px;
@@ -70,5 +74,6 @@
 
   .introduction {
     margin-right: 43%;
+    font-size: 2rem;
   }
 }
