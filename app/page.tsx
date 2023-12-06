@@ -114,7 +114,7 @@ export default async function Home() {
       <PagePreview
         previewImages={projectPreview.fields.previewImage}
         previewText={projectPreview.fields.previewText}
-        title="About Project"
+        title="About"
         url="/about"
       />
       <PagePreview
