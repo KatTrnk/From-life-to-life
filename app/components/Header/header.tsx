@@ -41,7 +41,7 @@ export const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" onClick={closeMenu}>
+                <Link href="/about#authors" onClick={closeMenu}>
                   Contact
                 </Link>
               </li>
