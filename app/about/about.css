@@ -12,8 +12,9 @@
   .container__authors {
     display: grid;
     grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.4fr 0.4fr;
     gap: 3px;
+    justify-content: center;
   }
 }
 
