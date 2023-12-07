@@ -1,7 +1,7 @@
 .portrait-story {
   margin: 0;
   padding: 0;
-  font-family: "Alegreya", serif;
+  background-color: var(--background-secondary)
 }
 
 .portrait-story__title {
