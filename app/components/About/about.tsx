@@ -40,7 +40,7 @@ export const About: React.FC<aboutProps> = ({
           </div>
         </div>
       </div>
-      <div className="ourTeam">
+      <div id="authors" className="ourTeam">
         <h2 className="ourTeam__title">{titleTeam}</h2>
       </div>
     </div>
