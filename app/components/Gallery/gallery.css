@@ -1,11 +1,39 @@
 .container__gallery {
   display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 0.8fr));
+
   gap: 3px;
+  justify-content: center;
+  /* margin-right: -100px;
+  margin-left: -100px */
+}
+
+.gallery-image {
+  height: 100%
 }
 
 .container__gallery__title {
   margin: auto 0;
   text-transform: capitalize;
+  text-align: center;
+}
+
+@media (min-width:680px) {
+  .container__gallery {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+    justify-content: none;
+    margin-right: none;
+    margin-left: none;
+  }
+
+  .container__gallery__title {
+    margin: auto 0;
+    text-transform: capitalize;
+    text-align: none;
+  }
+
+
 }

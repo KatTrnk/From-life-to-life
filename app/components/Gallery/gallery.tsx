@@ -11,11 +11,13 @@ export const Gallery: React.FC<GalleryProps> = ({ title, stories }) => {
       <h3 className="container__gallery__title">{title}</h3>
       {stories.map((story) => {
         return (
-          <StoryPreview
-            name={story.name}
-            mainImage={story.mainImage}
-            slug={story.slug}
-          />
+          <div className="gallery-image">
+            <StoryPreview
+              name={story.name}
+              mainImage={story.mainImage}
+              slug={story.slug}
+            />
+          </div>
         );
       })}
     </div>
