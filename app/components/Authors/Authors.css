@@ -15,9 +15,9 @@ body {
   width: 310px;
   height: 260px;
   justify-self: center;
-  border-radius: 3% 3% 3% 3%;
 
-  box-shadow: 2px 2px 3px 2px rgba(20, 20, 20, 0.4);
+
+  box-shadow: 1px 1px 1px 1px rgba(20, 20, 20, 0.4);
 }
 
 
