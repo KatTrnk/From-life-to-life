@@ -28,26 +28,36 @@
 
 }
 
+.about-quote-article {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 .about__quote {
   text-align: center;
   font-weight: bold;
   line-height: 1.4;
   font-size: 1.2rem;
+  margin-bottom: 40px;
+
 }
 
 .about__article {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
   line-height: 1.2;
   font-size: 1.1rem;
+  gap: 20px;
 }
 
 .about-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 30px;
-  margin-right: 40px;
-  margin-left: 40px;
+  gap: 50px;
+
 }
 
 .ourTeam__title {

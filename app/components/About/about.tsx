@@ -33,9 +33,11 @@ export const About: React.FC<aboutProps> = ({
             priority
           />
         </div>
-        <p className="about__quote">{quote}</p>
-        <div className="about__article">
-          {documentToReactComponents(article)}
+        <div className="about-quote-article">
+          <p className="about__quote">{quote}</p>
+          <div className="about__article">
+            {documentToReactComponents(article)}
+          </div>
         </div>
       </div>
       <div className="ourTeam">
