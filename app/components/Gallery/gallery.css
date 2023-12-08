@@ -16,6 +16,10 @@
   margin: auto 0;
   text-transform: capitalize;
   text-align: center;
+  font-family: 'Playfair Display SC', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 @media (min-width:680px) {
@@ -27,6 +31,9 @@
     justify-content: none;
     margin-right: none;
     margin-left: none;
+    font-family: 'Playfair Display SC', serif;
+    font-style: italic;
+    font-weight: 400;
   }
 
   .container__gallery__title {
