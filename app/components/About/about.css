@@ -104,6 +104,10 @@
 
   }
 
+  .about__article {
+    font-size: 1.1rem;
+  }
+
   .ourTeam__title {
     position: relative;
     margin-top: 80px;
@@ -125,5 +129,9 @@
     left: 3px;
     border-bottom: 2px ridge black;
     width: 264px
+  }
+
+  .about__quote {
+    font-size: 1.4rem;
   }
 }
