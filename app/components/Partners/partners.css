@@ -20,6 +20,7 @@
 @media (min-width: 680px) {
   .container__partners {
     padding: 50px;
+    padding-top: 70px;
 
   }
 
@@ -27,6 +28,5 @@
     padding: 30px;
     width: 34%;
   }
-
 
 }
