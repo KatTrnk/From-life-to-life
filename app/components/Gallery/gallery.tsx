@@ -1,5 +1,6 @@
 import { StoryPreview, storyPreviewProps } from '../StoryPreview/storyPreview';
 import './gallery.css';
+import '../../globals.css';
 
 interface GalleryProps {
   title: string;

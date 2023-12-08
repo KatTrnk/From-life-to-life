@@ -3,10 +3,11 @@
   src: url('/./public/Brown\ Sugar\ .ttf');
 }
 
-@font-face {
-  font-family: 'Playfair Display', serif;
-  src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
-}
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+
+
 
 * {
   box-sizing: border-box;
@@ -18,7 +19,7 @@
 
 :root {
   --background-primary: #fffff;
-  --background-secondary: #F5F4F6;
+  --background-secondary: #F5F5F5;
 }
 
 @media (min-width:680px) {
@@ -35,7 +36,7 @@
 
 @media (min-width:1200px) {
   body {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
 
   }

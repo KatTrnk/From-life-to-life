@@ -11,3 +11,13 @@
   justify-content: space-between;
   gap: 6px;
 }
+
+.text-footer {
+  visibility: hidden;
+}
+
+@media (min-width: 680px) {
+  .text-footer {
+    visibility: visible;
+  }
+}
