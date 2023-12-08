@@ -109,6 +109,7 @@
 
   .image-number1.container__image--is-single {
     visibility: visible;
+    height: 500px;
   }
 
   .previewText {
