@@ -2,7 +2,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Document } from '@contentful/rich-text-types';
 import './about.css';
 import { Asset } from 'contentful';
-
 import Image from 'next/image';
 
 interface aboutProps {
