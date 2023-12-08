@@ -1,6 +1,6 @@
 .page-preview {
   display: grid;
-  grid-template-rows: 3fr 2fr 1fr;
+  grid-template-rows: 2.5fr 0.1fr 0.3fr;
   grid-template-columns: 1fr;
   background-color: var(--background-secondary);
 }
@@ -35,8 +35,8 @@
   grid-row-start: 1;
   grid-column-start: 1;
   grid-row-end: 3;
-  height: 100%;
-  /* visibility: hidden; */
+  height: 630px;
+
 }
 
 .previewText {
