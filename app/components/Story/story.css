@@ -1,7 +1,7 @@
 .story {
   margin: 0;
   padding: 0;
-  font-family: "Alegreya", serif;
+
   background-color: var(--background-secondary)
 }
 
@@ -9,7 +9,7 @@
 
 .story__title {
   /* font-weight: bold; */
-  font-size: 2em;
+  font-size: 1.6rem;
   text-align: center;
   margin-bottom: 25px;
   font-family: 'Playfair Display SC', serif;
@@ -93,6 +93,7 @@
     padding-right: 0;
     line-height: 1.5;
     font-size: 24px;
+    font-size: 1.2rem;
   }
 }
 

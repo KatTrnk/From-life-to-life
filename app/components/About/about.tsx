@@ -3,6 +3,7 @@ import { Document } from '@contentful/rich-text-types';
 import './about.css';
 import { Asset } from 'contentful';
 import Image from 'next/image';
+import '../../globals.css';
 
 interface aboutProps {
   title: string;

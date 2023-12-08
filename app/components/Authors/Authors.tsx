@@ -3,6 +3,7 @@ import { Document } from '@contentful/rich-text-types';
 import { Asset } from 'contentful';
 import Image from 'next/image';
 import './Authors.css';
+import '../../globals.css';
 
 interface AuthorsProps {
   name: string;
