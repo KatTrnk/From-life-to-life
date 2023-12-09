@@ -14,6 +14,7 @@ export const Gallery: React.FC<GalleryProps> = ({ title, stories }) => {
         return (
           <div className="gallery-image">
             <StoryPreview
+              key={story.sys.id}
               name={story.name}
               mainImage={story.mainImage}
               slug={story.slug}
