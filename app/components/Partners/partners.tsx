@@ -1,4 +1,5 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Image from 'next/image';
 import './partners.css';
 
 interface PartnersProps {
@@ -16,7 +17,13 @@ export const Partners: React.FC<PartnersProps> = ({
   return (
     <div className="container__partners">
       <p className="details">{title}</p>
-      <img className="logo" src={logoUrl}></img>
+      <Image
+        className="logo"
+        src={logoUrl}
+        alt={title}
+        width={100}
+        height={120}
+      ></Image>
       <p className="email">{email}</p>
       {/* <p className="link">{url}</p> */}
     </div>
