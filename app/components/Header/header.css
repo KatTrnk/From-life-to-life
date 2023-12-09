@@ -71,13 +71,5 @@
     text-align: center;
   }
 
-  .menu {
-    filter: opacity(95%);
-  }
-}
 
-@media (min-width: 680px) {
-  .menu {
-    filter: opacity(80%);
-  }
 }
