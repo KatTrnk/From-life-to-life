@@ -16,6 +16,10 @@ export const Header = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
+  // let currentPathname = '';
+  // if (typeof window !== 'undefined') {
+  //   currentPathname = window.location.pathname;
+  // }
 
   return (
     <div>
@@ -23,13 +27,13 @@ export const Header = () => {
         <div className={isOpen ? 'menu menu-open' : 'menu'}>
           <div className="sidebar">
             <ul>
-              {window.location.pathname !== '/' && (
-                <li>
-                  <Link href="/" onClick={closeMenu}>
-                    Home
-                  </Link>
-                </li>
-              )}
+              {/* {window.location.pathname !== '/' && ( */}
+              <li>
+                <Link href="/" onClick={closeMenu}>
+                  Home
+                </Link>
+              </li>
+              {/* )} */}
               <li>
                 <Link href="/about" onClick={closeMenu}>
                   About
