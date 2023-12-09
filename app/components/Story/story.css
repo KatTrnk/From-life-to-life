@@ -77,6 +77,11 @@
     height: 400px;
   }
 
+  .article {
+    margin-left: 80px;
+    margin-right: 20px;
+  }
+
   .story__article {
     display: flex;
     flex-direction: row;
@@ -146,7 +151,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-left: 118px;
+    margin-left: 130px;
+    margin-right: 20px;
   }
 
 

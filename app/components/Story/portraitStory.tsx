@@ -63,7 +63,7 @@ export const PortraitStory: React.FC<portraitStoryProps> = ({
 
         <div className="portrait-story__article">
           <p className="summary">{summary}</p>
-          <div className="article">
+          <div className="portrait-story__article-article">
             {documentToReactComponents(storyArticle)}
           </div>
         </div>
