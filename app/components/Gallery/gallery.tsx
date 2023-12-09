@@ -10,9 +10,9 @@ export const Gallery: React.FC<GalleryProps> = ({ title, stories }) => {
   return (
     <div className="container__gallery">
       <h3 className="container__gallery__title">{title}</h3>
-      {stories.map((story) => {
+      {stories.map((story, index) => {
         return (
-          <div className="gallery-image">
+          <div key={index} className="gallery-image">
             <StoryPreview
               name={story.name}
               mainImage={story.mainImage}
