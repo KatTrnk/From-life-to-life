@@ -1,12 +1,14 @@
 'use client';
 import { useState } from 'react';
-
 import icon from './menu.png';
 import Image from 'next/image';
 import '../Header/header.css';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export const Header = () => {
+  const pathname = usePathname();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -16,10 +18,6 @@ export const Header = () => {
   const closeMenu = () => {
     setIsOpen(false);
   };
-  // let currentPathname = '';
-  // if (typeof window !== 'undefined') {
-  //   currentPathname = window.location.pathname;
-  // }
 
   return (
     <div>
@@ -27,13 +25,13 @@ export const Header = () => {
         <div className={isOpen ? 'menu menu-open' : 'menu'}>
           <div className="sidebar">
             <ul>
-              {/* {window.location.pathname !== '/' && ( */}
-              <li>
-                <Link href="/" onClick={closeMenu}>
-                  Home
-                </Link>
-              </li>
-              {/* )} */}
+              {pathname !== '/' && (
+                <li>
+                  <Link href="/" onClick={closeMenu}>
+                    Home
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link href="/about" onClick={closeMenu}>
                   About
