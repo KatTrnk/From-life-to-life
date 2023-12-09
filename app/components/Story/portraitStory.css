@@ -82,9 +82,9 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  text-align: justify;
-  margin-left: 40px;
-  margin-right: 40px;
+  /* text-align: justify; */
+  margin-left: 20px;
+  margin-right: 20px;
   line-height: 1.4;
 }
 
