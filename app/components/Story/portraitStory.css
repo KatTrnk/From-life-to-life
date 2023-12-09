@@ -244,7 +244,7 @@ aside {
   .portrait-story__quoteImage-container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+
     gap: 35px;
 
   }
