@@ -78,7 +78,7 @@ aside {
   width: 50%
 }
 
-.article {
+.portrait-story__article-article {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -102,6 +102,19 @@ aside {
     display: flex;
     flex-direction: row;
   }
+
+  .portrait-story__article-article {
+    margin-left: 50px;
+    margin-right: 40px;
+
+  }
+
+  .portrait-story__article-article::first-letter {
+    initial-letter: 2;
+
+
+  }
+
 
   /* .portrait-story__article {
     display: flex;
@@ -167,7 +180,7 @@ aside {
 
   .portrait-story__image-container {
     position: relative;
-    width: 320px;
+    width: 380px;
     height: 600px;
   }
 }
@@ -178,6 +191,11 @@ aside {
     display: flex;
     flex-direction: row;
     gap: 50px;
+  }
+
+  .portrait-story__article-article {
+    margin-left: 70px;
+    margin-right: 60px;
   }
 
   /* .portrait-story__article {
