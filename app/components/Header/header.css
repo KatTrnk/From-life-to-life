@@ -6,8 +6,15 @@
   background-color: var(--background-secondary);
 }
 
+
 .hamburger {
   z-index: 10;
+  margin-right: 10px
+}
+
+.hamburger:hover {
+
+  cursor: pointer;
 }
 
 .menu {
@@ -60,7 +67,7 @@
   .menu-open {
     right: 0;
     z-index: 5;
-    width: 50%;
+    width: 15%;
     text-align: center;
   }
 
