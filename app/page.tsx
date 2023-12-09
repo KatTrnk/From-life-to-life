@@ -129,6 +129,7 @@ export default async function Home() {
         const image = e.fields.logo as Asset<undefined, string>;
         return (
           <Partners
+            key={e.sys.id}
             logoUrl={`https:${image.fields?.file?.url}`}
             email={e.fields.email}
             url={e.fields.url}
