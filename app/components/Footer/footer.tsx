@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="name name-left">
         <p>Darja Krjuková</p>
         <p className="github1">
-          <Link href="https://github.com/DarjaCodes">
+          <Link className="github1-ref" href="https://github.com/DarjaCodes">
             <Image src={Github} alt="logoGH" width={20} height={20}></Image>
           </Link>
         </p>
@@ -18,7 +18,7 @@ export const Footer = () => {
       <div className="name name-right">
         <p>Kateřina Trnková</p>
         <p className="github1">
-          <Link href="https://github.com/KatTrnk">
+          <Link className="github1-ref" href="https://github.com/KatTrnk">
             <Image src={Github} alt="logoGH" width={20} height={20}></Image>
           </Link>
         </p>
