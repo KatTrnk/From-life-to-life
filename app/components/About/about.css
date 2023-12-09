@@ -50,10 +50,10 @@
 }
 
 .about__article {
-  text-align: center;
+
   display: flex;
   flex-direction: column;
-  text-align: justify;
+
   line-height: 1.2;
   font-size: 1rem;
   gap: 20px;
@@ -87,6 +87,11 @@
     top: 48%;
   }
 
+  .about-quote-article {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
   .ourTeam__title {
     font-size: 2em;
   }
@@ -101,6 +106,12 @@
     font-family: 'Playfair Display SC', serif;
     font-style: italic;
     font-weight: 400;
+
+  }
+
+  .about-quote-article {
+    max-width: 700px;
+    margin: 0 auto;
 
   }
 
