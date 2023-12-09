@@ -11,10 +11,11 @@
 .logo {
   padding: 30px;
   width: 50%;
+  height: auto;
 }
 
 .details {
-  font-size: 25.6px;
+  font-size: 19.6px;
 }
 
 @media (min-width: 680px) {
@@ -26,7 +27,13 @@
 
   .logo {
     padding: 30px;
-    width: 34%;
+    width: 40%;
   }
 
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 29%;
+  }
 }
