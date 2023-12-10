@@ -22,7 +22,7 @@ export const Partners: React.FC<PartnersProps> = ({
         src={logoUrl}
         alt={title}
         width={100}
-        height={120}
+        height={50}
       ></Image>
       <p className="email">{email}</p>
       {/* <p className="link">{url}</p> */}
