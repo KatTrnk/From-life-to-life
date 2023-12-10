@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
 
 
 
@@ -47,7 +47,7 @@
   line-height: 1.4;
   font-size: 1rem;
   margin-bottom: 40px;
-  font-family: 'Roboto Condensed', sans-serif;
+
 
 }
 
@@ -59,11 +59,11 @@
   line-height: 1.2;
   font-size: 1rem;
   gap: 20px;
-  font-family: 'Roboto Condensed', sans-serif;
+
 }
 
 .about__article p {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .about-container {
