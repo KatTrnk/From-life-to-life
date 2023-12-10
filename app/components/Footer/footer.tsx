@@ -14,7 +14,7 @@ export const Footer = () => {
           </Link>
         </p>
       </div>
-      <p className="text-footer"> © 2023 DA Web</p>
+      <p className="text-footer"> © D&K</p>
       <div className="name name-right">
         <p>Kateřina Trnková</p>
         <p className="github1">
