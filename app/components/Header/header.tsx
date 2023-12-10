@@ -50,7 +50,10 @@ export const Header = () => {
             </ul>
           </div>
         </div>
-        <div className="hamburger" onClick={toggleMenu}>
+        <div
+          className={`hamburger ${isOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+        >
           <Image src={icon} alt="Menu Icon" width={50} height={50} />
         </div>
       </div>

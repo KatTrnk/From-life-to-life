@@ -13,12 +13,14 @@
 }
 
 .hamburger:hover {
-
   cursor: pointer;
-
 }
 
+.hamburger.active {
+  transition: transform 0.4s ease;
+  transform: rotatex(150deg);
 
+}
 
 .menu {
   position: fixed;
@@ -28,6 +30,7 @@
   background-color: var(--background-secondary);
   filter: brightness(90%);
   filter: opacity(95%);
+
 
 }
 
@@ -39,6 +42,8 @@
   width: 100vw;
   text-align: center;
 }
+
+
 
 .menu .sidebar ul {
   list-style: none;
@@ -76,7 +81,7 @@
   .menu-open {
     right: 0;
     z-index: 5;
-    width: 250px;
+    width: 270px;
     text-align: center;
   }
 
