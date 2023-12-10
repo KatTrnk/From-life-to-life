@@ -103,13 +103,6 @@ export default async function Home() {
       <div className="container__empty">
         <p className="introduction">{homepageData.fields.introduction}</p>
       </div>
-      {/* <Exhibition
-        location={exhibition.fields.location}
-        dateFrom={exhibition.fields.dateFrom}
-        dateTo={exhibition.fields.dateTo}
-        link={exhibition.fields.link}
-        details={exhibition.fields.details}
-      /> */}
 
       <PagePreview
         previewImages={projectPreview.fields.previewImage}
