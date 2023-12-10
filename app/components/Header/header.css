@@ -63,12 +63,14 @@
   padding: 10px;
   font-family: 'Alegreya SC', serif;
   text-transform: uppercase;
+  transition: filter 2000ms;
 
 }
 
 .menu .sidebar a:hover {
   filter: brightness(50%);
   filter: opacity(30%);
+
 }
 
 .icon {
