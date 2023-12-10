@@ -71,7 +71,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   gap: 50px;
-
+  background-color: var(--background-secondary);
 }
 
 .ourTeam__title {

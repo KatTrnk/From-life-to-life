@@ -27,13 +27,13 @@
 
   .logo {
     padding: 30px;
-    width: 40%;
+    width: 32%;
   }
 
 }
 
 @media (min-width: 1200px) {
   .logo {
-    width: 29%;
+    width: 27%;
   }
 }
