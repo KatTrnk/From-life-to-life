@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export const Header = () => {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,13 +25,13 @@ export const Header = () => {
         <div className={isOpen ? 'menu menu-open' : 'menu'}>
           <div className="sidebar">
             <ul>
-              {pathname !== '/' && (
-                <li>
-                  <Link href="/" onClick={closeMenu}>
-                    Home
-                  </Link>
-                </li>
-              )}
+              {/* {pathname !== '/' && ( */}
+              <li>
+                <Link href="/" onClick={closeMenu}>
+                  Home
+                </Link>
+              </li>
+              {/* )} */}
               <li>
                 <Link href="/about" onClick={closeMenu}>
                   About
