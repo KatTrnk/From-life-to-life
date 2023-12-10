@@ -16,6 +16,11 @@
   box-shadow: 1px 1px 1px 1px rgba(20, 20, 20, 0.4);
 }
 
+.authors-detal__email {
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
 
 
 .authors-detail {
