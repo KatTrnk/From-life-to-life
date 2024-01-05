@@ -174,7 +174,14 @@ aside {
   .portrait-story__image-container {
     position: relative;
     width: 380px;
-    height: 600px;
+    height: 580px;
+  }
+
+  .portrait-story__image-container__image {
+    object-fit: contain;
+
+
+
   }
 }
 
