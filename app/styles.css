@@ -10,7 +10,8 @@
 }
 
 .container-banner {
-  object-fit: cover;
+  /* object-fit: cover; */
+  object-fit: fill;
 
 }
 
@@ -47,18 +48,21 @@
 
 @media (min-width: 680px) {
   .container-header {
-    height: 400px;
+    /* height: 400px; */
+    height: 586px;
   }
 
   .header {
     font-size: 3em;
+    top: 70%;
 
   }
 }
 
 @media (min-width: 1200px) {
   .container-header {
-    height: 500px;
+    /* height: 500px; */
+    height: 624px;
   }
 
   .header {
