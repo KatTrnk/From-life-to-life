@@ -17,7 +17,7 @@
 .story-preview__img-containter {
   position: relative;
   display: flex;
-  height: 340px;
+  height: 400px;
 
   filter: grayscale();
   transition: filter 500ms linear;
