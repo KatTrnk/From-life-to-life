@@ -6,6 +6,7 @@
   position: relative;
   width: 100%;
   height: 300px;
+  top: 40px;
 
 }
 
@@ -14,6 +15,9 @@
   object-fit: fill;
 
 }
+
+
+
 
 .header {
   font-family: 'Playfair Display SC', serif;
@@ -32,7 +36,7 @@
   font-family: 'Playfair Display SC', serif;
   font-style: italic;
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 20px;
 
 }
 
@@ -51,6 +55,7 @@
   .container-header {
     /* height: 400px; */
     height: 586px;
+    top: 0;
   }
 
   .header {
