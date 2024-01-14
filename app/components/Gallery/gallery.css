@@ -26,6 +26,7 @@
   font-weight: 400;
   font-size: 1.6rem;
   margin-bottom: 15px;
+  margin-top: 60px;
 }
 
 @media (min-width:680px) {
@@ -46,6 +47,7 @@
     margin: auto 0;
     text-transform: capitalize;
     text-align: none;
+    margin-top: 0
   }
 
 
