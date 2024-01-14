@@ -9,7 +9,7 @@
 .authors-image {
   object-fit: cover;
   width: 310px;
-  height: 260px;
+  height: 280px;
   justify-self: center;
 
 
@@ -42,8 +42,8 @@
 @media (min-width:680px) {
   .authors-image {
 
-    width: 310px;
-    height: 260px;
+    width: 330px;
+    height: 300px;
 
   }
 }
@@ -51,8 +51,8 @@
 @media (min-width:1000px) {
   .authors-image {
 
-    width: 310px;
-    height: 260px;
+    width: 340px;
+    height: 310px;
 
   }
 
