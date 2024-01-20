@@ -50,7 +50,10 @@ export const PortraitStory: React.FC<portraitStoryProps> = ({
               className="portrait-story__image-container__image"
               src={`https:${mainImage.fields.file?.url}`}
               alt={`${mainImage.fields.title} image`}
-              fill
+              layout="responsive"
+              width={300}
+              height={550}
+              // fill
               priority
             />
           </div>
