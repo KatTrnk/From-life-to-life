@@ -45,7 +45,8 @@
   margin: auto;
   padding: 5px 40px;
   font-weight: 400;
-  /* font-weight: bold; */
+  text-align: justify
+    /* font-weight: bold; */
 
 }
 
@@ -114,6 +115,7 @@
 
   .previewText {
     grid-column-start: 2;
+
 
   }
 

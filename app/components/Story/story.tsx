@@ -50,7 +50,7 @@ export const StoryDetail: React.FC<storyProps> = ({
           // fill
           layout="responsive"
           width={450}
-          height={390}
+          height={300}
           priority
         />
       </div>

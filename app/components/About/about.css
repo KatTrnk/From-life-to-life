@@ -44,7 +44,8 @@
 }
 
 .about__quote {
-  text-align: center;
+  text-align: justify;
+  text-align-last: center;
   font-weight: bold;
   line-height: 1.4;
   font-size: 1rem;
@@ -57,7 +58,7 @@
 
   display: flex;
   flex-direction: column;
-
+  text-align: justify;
   line-height: 1.2;
   font-size: 1rem;
   gap: 20px;
