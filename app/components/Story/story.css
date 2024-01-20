@@ -4,7 +4,7 @@
 .story {
   margin: 0;
   padding: 0;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   background-color: var(--background-secondary);
   position: relative;
 }
@@ -26,6 +26,10 @@
   padding-left: 10px;
   position: absolute;
   top: 70px
+}
+
+.name {
+  margin-top: 180px
 }
 
 .story__city {
@@ -51,12 +55,12 @@
 .story__image-container {
   position: relative;
   width: 100%;
-  height: 350px;
-  margin-top: 110px;
+  /* height: 350px; */
+
 }
 
 .story__image-container__image {
-  object-fit: fill;
+  /* object-fit: fill; */
   /* object-fit: cover; */
 }
 
@@ -89,10 +93,14 @@
 }
 
 @media (min-width:680px) {
+  .story {
+    padding-bottom: 100px;
+  }
+
   .story__image-container {
     position: relative;
     width: 100%;
-    height: 670px;
+    /* height: 670px; */
   }
 
   .story__title {
@@ -100,6 +108,9 @@
     top: 0;
   }
 
+  .name {
+    margin-top: 0
+  }
 
   .article {
     margin-left: 80px;

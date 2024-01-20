@@ -47,7 +47,10 @@ export const StoryDetail: React.FC<storyProps> = ({
           className="story__image-container__image"
           src={`https:${mainImage.fields.file?.url}`}
           alt={`${mainImage.fields.title} image`}
-          fill
+          // fill
+          layout="responsive"
+          width={450}
+          height={330}
           priority
         />
       </div>
