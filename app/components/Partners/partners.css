@@ -8,9 +8,11 @@
 
 }
 
+
+
 .logo {
   padding: 30px;
-  width: 50%;
+  width: 50% !important;
   height: auto;
 }
 
@@ -27,13 +29,14 @@
 
   .logo {
     padding: 30px;
-    width: 32%;
+    width: 35% !important;
+    height: 20%
   }
 
 }
 
 @media (min-width: 1200px) {
   .logo {
-    width: 27%;
+    width: 31% !important;
   }
 }
